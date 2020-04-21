@@ -9,6 +9,7 @@ describe('queryLexer', () => {
         operator: 'and',
         operations: [
           { operator: 'eq', field: 'a', values: ['hey'] },
+          { operator: 'neq', field: 'a', values: ['heya'] },
           { operator: 'lt', field: 'b', values: [6] },
           { operator: 'gt', field: 'c', values: [0] },
           { operator: 'lte', field: 'd', values: [5] },
@@ -37,6 +38,7 @@ describe('queryLexer', () => {
   )($ => ({
     filter: $.and(
       $.eq('a', 'hey'),
+      $.neq('a', 'heya'),
       $.lt('b', 6),
       $.gt('c', 0),
       $.lte('d', 5),

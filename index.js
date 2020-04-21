@@ -1,7 +1,7 @@
 const $ = {}
 
 const fieldOperators = new Set([
-  'eq', 'gt', 'lt', 'gte', 'lte',
+  'eq', 'neq', 'gt', 'lt', 'gte', 'lte',
   'exists', 'dne', 'prefix', 'between',
   'like', 'geo',
   'asc', 'desc',
